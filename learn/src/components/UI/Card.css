@@ -1,0 +1,30 @@
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-tag {
+    font-size: 14px;
+    color: #007bff;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .card-details {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .card-date,
+  .card-time {
+    margin-right: 15px;
+  }
+  
