@@ -4,7 +4,7 @@ const Button = (props) => {
   return (
     <button
       type="button"
-      className={props.className}
+      className="button"
       onClick={props.submitHandler}
       disabled={props.disabled}
     >
@@ -14,7 +14,6 @@ const Button = (props) => {
 };
 
 Button.defaultProps = {
-  className: "btn btn-primary",
   disabled: false,
 };
 

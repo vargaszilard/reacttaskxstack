@@ -1,6 +1,7 @@
 import { useState } from "react";
 import StudentRegister from "./StudentRegister";
 import TrainerRegister from "./TrainerRegister";
+import "./RegisterPage.css";
 
 const RegisterPage = () => {
   const [switcher, setSwitcher] = useState("student");
@@ -11,7 +12,7 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="registration-container">
       <h1>Registration</h1>
       <select name="target" id="targets" onChange={handleSwitcherChange}>
         <option value="student">Student</option>

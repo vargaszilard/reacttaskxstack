@@ -1,10 +1,12 @@
+import React from "react";
+import "./ComplettInputField.css";
+
 const ComplettInputField = (props) => {
   return (
-    <div className="form-group">
+    <div className="input-container">
       <label htmlFor={props.htmlFor}>{props.labelName}</label>
       <input
         type={props.type}
-        className="form-control"
         id={props.id}
         placeholder={props.placeholder}
         onChange={props.changeHandler}
