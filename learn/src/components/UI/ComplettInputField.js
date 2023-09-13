@@ -16,7 +16,7 @@ const ComplettInputField = (props) => {
 };
 
 ComplettInputField.defaultProps = {
-  type: "text",
+  type: "input",
 };
 
 export default ComplettInputField;

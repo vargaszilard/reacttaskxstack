@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./LoginPage.css";
 import Button from "../UI/Button";
 import ComplettInputField from "../UI/ComplettInputField";
@@ -7,7 +7,6 @@ function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
-  const [loading, setLoading] = useState(true);
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -39,13 +38,6 @@ function LoginPage() {
     return Object.keys(newErrors).length === 0;
   };
 
-  useEffect(() => {
-    // Simulate an API call with setTimeout
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000); // Simulate a 2-second delay
-  }, []);
-
   return (
     <div className="container mt-5">
       <h1>Sign in</h1>
@@ -65,13 +57,12 @@ function LoginPage() {
           labelName="password"
           id="password"
           placeholder="Enter password"
+          type="password"
           changeHandler={handlePasswordChange}
         />
         {errors.password && <div className="error">{errors.password}</div>}
 
-        <Button submitHandler={handleLogin} disabled={loading}>
-          Sign in
-        </Button>
+        <Button submitHandler={handleLogin}>Sign in</Button>
       </form>
     </div>
   );

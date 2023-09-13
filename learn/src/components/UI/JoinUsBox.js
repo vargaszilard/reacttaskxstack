@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import "./JoinUsBox.css";
+import { Link } from "react-router-dom";
 
 const JoinUsBox = (props) => {
   return (
@@ -10,7 +11,9 @@ const JoinUsBox = (props) => {
         Do consectetur proident proident id eiusmod deserunt consequat pariatur
         ad ex velit do Lorem reprehenderit.
       </h4>
-      <Button className="register-button">Join us</Button>
+      <Link to="/registration">
+        <Button className="register-button">Join us</Button>
+      </Link>
     </div>
   );
 };

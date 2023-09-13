@@ -1,13 +1,14 @@
 import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Button from "../Button";
 
 const BasicToaster = () => {
-  const notify = () => toast("Training added");
+  const notify = () => toast("Toaster clicked!");
 
   return (
     <div>
-      <button onClick={notify}>Notify!</button>
+      <Button submitHandler={notify}>Notify!</Button>
       <ToastContainer />
     </div>
   );
